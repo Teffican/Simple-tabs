@@ -1,0 +1,91 @@
+html {
+   box-sizing: border-box;
+}
+*,*::before,*::after{
+   box-sizing: inherit;
+}
+a{
+   text-decoration: none;
+   color: inherit;
+   display: inline-block;
+}
+ul,li{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+   margin: 0;
+}
+p {
+   margin: 0;
+}
+
+body{
+   color: #2F3035;
+   font-size: 20px;
+   line-height: 24px;
+   overflow-x: hidden;
+   min-width: 320px;
+}
+.container{
+   max-width: 1200px;
+   padding: 0 15px;
+   margin: 0 auto; 
+}
+
+.tabs__inner {
+   border: 1px solid silver;
+   width: 500px;
+   margin: 0 auto;
+}
+.tabs__list{
+   display: flex;
+   justify-content: start;
+}
+.tabs__item{
+   padding: 10px;
+   position: relative;
+   margin-right: 0px;
+}
+
+.tabs__item::before{
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 3px;
+   left: auto;
+   right: -1px;
+   bottom: -2px;
+   background-color: #1c62cd;
+   transition: all 0.3s;
+}
+.active-tab.tabs__item::before{
+   width: 100%;
+   right: auto;
+   left: 0;
+}
+
+.tabs__content-item{
+   padding: 20px;
+}
+
+@keyframes fade {
+   from {
+      opacity: 0.1;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+.fade {
+   animation-name: fade;
+   animation-duration: 1s;
+}
+
